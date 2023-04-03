@@ -3,7 +3,7 @@
 OpenAI Chat Prompter Script
 
 
-This script lets you insert predefined prompts into the OpenAI Chat input using a keyboard shortcut. To use it, install Tampermonkey on Chrome and follow these steps:
+This script lets you insert predefined prompts into the OpenAI Chat input using a keyboard shortcut. To use it, install Tampermonkey on Chrome (or some other extension that lets you execute javascript on predefined pages) and follow these steps:
 
 Install the script from this URL: https://raw.githubusercontent.com/yourusername/yourrepository/master/openai-chat-prompter.js.
 
