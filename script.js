@@ -8,10 +8,10 @@
 */
 
 const keyMappings = {
-  x: "Remember the data that I gave you and reply only with 'ok.'",
+  x: "Remember given text and reply only with 'ok.'.",
   z: "I am working on a Django + GraphQL project.",
-  e: "Locate any semantic/logic errors in the following code snippet:",
-  a: "Analyze give code for code smells and suggest improvements:",
+  e: "Locate any semantic/logic errors in the given code snippet:",
+  a: "Analyze given code for code smells and suggest improvements:",
 };
 
 // ==UserScript==
@@ -33,8 +33,8 @@ function setUpKeyBinds() {
   textArea = document.querySelector("textarea");
   textArea.addEventListener("keydown", handleKeyDown);
   const keyMapKeysStr = Object.keys(keyMappings).join(", ");
-  textArea.placeholder = `${textArea.placeholder} (Keymaps: alt + ${keyMapKeysStr})`;
-  console.log("Key Mappings:\n");
+  textArea.placeholder = `Keymaps: alt + (${keyMapKeysStr})`;
+  console.log("Key Mapps:\n");
   // for loop
   for (let key in keyMappings) {
     console.log(`${key} : ${keyMappings[key]}`);
@@ -42,7 +42,6 @@ function setUpKeyBinds() {
 }
 
 function handleKeyDown(event) {
-  console.log({ event });
   if (event.altKey && keyMappings[event.key]) {
     event.preventDefault();
     const mappedValue = keyMappings[event.key];
