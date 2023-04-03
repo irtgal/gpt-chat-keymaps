@@ -12,7 +12,7 @@ Paste the script inside the text editor.
 
 Define your prompts in the keyMappings section by specifying the key combination and the prompt.
 
-Press Alt+<key> to insert a prompt into the chat input box.
+Press Alt+\<key\> to insert a prompt into the chat input box.
 
 
 Notes:
