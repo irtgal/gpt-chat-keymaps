@@ -68,22 +68,16 @@ function appendToTextArea(input) {
 
 function init() {
   console.log("Initializing...");
+  setUpKeyBinds();
 
   // select the <title> element
   const title = document.querySelector("title");
-
   // create an observer instance
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
-      console.log(mutation.type); // logs the type of mutation (e.g. "attributes", "childList", "characterData")
-      console.log(mutation.target); // logs the node that was mutated (in this case, the <title> element)
-      console.log(mutation.oldValue); // logs the previous value of the mutated attribute or character data
-
       // Only run keybinding setup when the title has changed and the DOM is finished loading
       if (document.readyState === "complete") {
         setUpKeyBinds();
-        console.log("Key Mappings:\n");
-        console.log({ keyMappings });
       }
     });
   });
