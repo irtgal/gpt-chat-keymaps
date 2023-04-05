@@ -12,7 +12,8 @@ const keyMappings = {
   z: "I am working on a Django + GraphQL project.",
   e: "Locate any semantic/logic errors in the given code snippet:",
   a: "Analyze given code for code smells and suggest improvements:",
-  q: "Ask any questions if something is unclear or you need more context."
+  q: "Ask any questions if something is unclear or you need more context.",
+  c: "Reply as concise as possible.",
 };
 
 // ==UserScript==
